@@ -14,6 +14,7 @@ const passport = require('passport');
 const session = require('express-session');
 const flash = require ('connect-flash');
 
+
 //Inicializamos
 const app = express();
 require('./database');
@@ -36,6 +37,7 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.static(path.join(__dirname + '/public')));
 
 app.use((req,res,next) => {
     app.locals.signupMessage = req.flash('signupMessage');
@@ -50,5 +52,5 @@ app.use(require('./routes/index'));
 //Starting the server
 app.listen(app.get('port'), () =>{
     console.log('Server', app.get('port'));
-})
+});
 
