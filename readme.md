@@ -11,7 +11,7 @@ A continuación se detallan las dependencias de desarrollo que han sido utilizad
 - mongoose 
 - passport 
 - passport-local
-- ejs
+- ejs-mate 
 - bcrypt-nodejs 
 - connect-flash 
 - morgan 
