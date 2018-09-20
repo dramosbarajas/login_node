@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
     email : String,
     password : String,
-});
+}, { timestamps: { createdAt: 'created_at', updatedAt: 'updatedAt' }});
 
 userSchema.methods.encryptPassword = (password) => {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(10));
