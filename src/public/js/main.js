@@ -6,6 +6,6 @@ $(document).ready(function (){
         isEmpty('passwordFieldSignIn');
         if(!$('#emailFieldSignIn').hasClass('is-invalid') && !$('#passwordFieldSignIn').hasClass('is-invalid')){
            $('#formSignIn').submit();
-        };
+        }
     });         
-})
+});

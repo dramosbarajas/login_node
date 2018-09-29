@@ -26,7 +26,7 @@ passport.use('local-signup', new localStrategy({
     newUser.password = newUser.encryptPassword(password);
     await newUser.save();
     done(null, newUser);
-}))
+}));
 
 passport.use('local-signin', new localStrategy({
     usernameField:'email',
@@ -44,4 +44,4 @@ passport.use('local-signin', new localStrategy({
     }
 
     done(null, user);
-}))
+}));
